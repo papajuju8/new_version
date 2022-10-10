@@ -121,7 +121,7 @@ class NewVersion {
   /// JSON document.
   Future<VersionStatus?> _getiOSStoreVersion(PackageInfo packageInfo) async {
     final id = iOSId ?? packageInfo.packageName;
-    final parameters = {"bundleId": "$id"};
+    final parameters = {"bundleId": "$id", "t": "${DateTime.now().millisecondsSinceEpoch}"};
     if (iOSAppStoreCountry != null) {
       parameters.addAll({"country": iOSAppStoreCountry!});
     }
@@ -151,7 +151,7 @@ class NewVersion {
       PackageInfo packageInfo) async {
     final id = androidId ?? packageInfo.packageName;
     final uri =
-    Uri.https("play.google.com", "/store/apps/details", {"id": "$id", "hl": "en"});
+    Uri.https("play.google.com", "/store/apps/details", {"id": "$id", "hl": "en","t": "${DateTime.now().millisecondsSinceEpoch}"});
     final response = await http.get(uri);
     if (response.statusCode != 200) {
       debugPrint('Can\'t find an app in the Play Store with the id: $id');
