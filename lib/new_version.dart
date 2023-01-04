@@ -182,7 +182,7 @@ class NewVersion {
     } else {
       storeVersion = RegExp(r',\[\[\["([0-9,\.]*)"]],')
           .firstMatch(response.body)!
-          .group(1);
+          .group(1) ?? '';
                                  
       // final scriptElements = document.getElementsByTagName('script');
       // final infoScriptElement = scriptElements.firstWhere(
