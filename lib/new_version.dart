@@ -180,7 +180,7 @@ class NewVersion {
           ?.querySelector('.DWPxHb')
           ?.text;
     } else {
-      storeVersion = RegExp(r',\[\[\[“([0-9,\.]*)“]],')
+      storeVersion = RegExp(r',\[\[\["([0-9,\.]*)"]],')
           .firstMatch(response.body)!
           .group(1);
                                  
