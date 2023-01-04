@@ -180,23 +180,23 @@ class NewVersion {
           ?.querySelector('.DWPxHb')
           ?.text;
     } else {
-      storeVersion = RegExp(r’,\[\[\[“([0-9,\.]*)“]],’)
+      storeVersion = RegExp(r',\[\[\[“([0-9,\.]*)“]],')
           .firstMatch(response.body)!
           .group(1);
                                  
-//       final scriptElements = document.getElementsByTagName('script');
-//       final infoScriptElement = scriptElements.firstWhere(
-//             (elm) => elm.text.contains('key: \'ds:5\''),
-//       );
+      // final scriptElements = document.getElementsByTagName('script');
+      // final infoScriptElement = scriptElements.firstWhere(
+      //       (elm) => elm.text.contains('key: \'ds:5\''),
+      // );
 
-//       final param = infoScriptElement.text.substring(20, infoScriptElement.text.length - 2)
-//           .replaceAll('key:', '"key":')
-//           .replaceAll('hash:', '"hash":')
-//           .replaceAll('data:', '"data":')
-//           .replaceAll('sideChannel:', '"sideChannel":')
-//           .replaceAll('\'', '"');
-//       final parsed = json.decode(param);
-//       final data =  parsed['data'];
+      // final param = infoScriptElement.text.substring(20, infoScriptElement.text.length - 2)
+      //     .replaceAll('key:', '"key":')
+      //     .replaceAll('hash:', '"hash":')
+      //     .replaceAll('data:', '"data":')
+      //     .replaceAll('sideChannel:', '"sideChannel":')
+      //     .replaceAll('\'', '"');
+      // final parsed = json.decode(param);
+      // final data =  parsed['data'];
 
 //       storeVersion = data[1][2][140][0][0][0];
 //       releaseNotes = data[1][2][144][1][1];
